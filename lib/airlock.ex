@@ -4,10 +4,10 @@ defmodule Airlock do
   """
   @behaviour Airlock.Adapter
 
-  @impl true
+  @impl Airlock.Adapter
   def write(key, value), do: driver().write(key, value)
 
-  @impl true
+  @impl Airlock.Adapter
   def read(key), do: driver().read(key)
 
   defp driver do

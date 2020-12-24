@@ -4,13 +4,13 @@ defmodule Airlock.File do
   """
   @behaviour Airlock.Adapter
 
-  @impl true
+  @impl Airlock.Adapter
   def write(key, value) do
     IO.puts("I write #{key}:#{value} to file")
     :ok
   end
 
-  @impl true
+  @impl Airlock.Adapter
   def read(key) do
     IO.puts("I read #{key} from file")
     {:ok, "file"}

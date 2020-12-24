@@ -4,13 +4,13 @@ defmodule Airlock.SSM do
   """
   @behaviour Airlock.Adapter
 
-  @impl true
+  @impl Airlock.Adapter
   def write(key, value) do
     IO.puts("I write #{key}:#{value} to SSM")
     :ok
   end
 
-  @impl true
+  @impl Airlock.Adapter
   def read(key) do
     IO.puts("I read #{key} from SSM")
     {:ok, "SSM"}
